@@ -49,7 +49,8 @@ $classieraAddress = true;
 $classiera_post_web_url = true;
 $classiera_ads_typeOn = true;
 $classiera_bid_system = true;
-$classieraRegularAdsOn = true;$adpost_defect = true;
+$classieraRegularAdsOn = true;
+$adpost_defect = true;
 $featuredADS = 0;
 $paidIMG = 3;
 $regularIMG = 3;
@@ -75,7 +76,8 @@ if(isset($redux_demo)){
 	$paidIMG = $redux_demo['premium-ads-limit'];
 	$regularIMG = $redux_demo['regular-ads-limit'];
 	$classiera_image_size = $redux_demo['classiera_image_size'];
-	$classieraRegularAdsOn = $redux_demo['regular-ads'];	$adpost_defect = $redux_demo['adpost_defect'];
+	$classieraRegularAdsOn = $redux_demo['regular-ads'];
+	$adpost_defect = $redux_demo['adpost_defect'];
 }
 $classieraProfileURL = classiera_get_template_url('template-profile.php');
 if(isset($redux_demo['classiera_exclude_categories'])){
@@ -272,7 +274,8 @@ if(isset($_POST['postTitle'])) {
 				if(isset($_POST['item-condition'])){
 					$itemCondition = $_POST['item-condition'];
 					update_post_meta($post_id, 'item-condition', $itemCondition, $allowed);
-				}				if(isset($_POST['post_defect'])){
+				}
+				if(isset($_POST['post_defect'])){
 					update_post_meta($post_id, 'post_defect', $_POST['post_defect'], $allowed);
 				}
 				if(isset($_POST['classiera_post_type'])){
@@ -575,8 +578,8 @@ get_header(); ?>
 												$tag = $category->term_id;
 												$classieraCatFields = get_option(MY_CATEGORY_FIELDS);
 												if (isset($classieraCatFields[$tag])){
-													if(isset($classieraCatFields[$tag]['category_icon_code'])){
-														$classieraCatIconCode = $classieraCatFields[$tag]['category_icon_code'];
+													if(isset($classieraCatFields[$tag]['category_image'ode'])){
+														$classieraCatIconCode = $classieraCatFields[$tag'category_image'_code'];
 													}
 													if(isset($classieraCatFields[$tag]['your_image_url'])){
 														$classieraCatIcoIMG = $classieraCatFields[$tag]['your_image_url'];
@@ -1036,14 +1039,16 @@ get_header(); ?>
                                                     <label for="used"><?php esc_html_e('Used : Like New', 'classiera') ?></label>
                                                 </div>
                                             </div>
-										</div><!--col-lg-3-->										<div class="col-lg-3 col-md-4 col-sm-5">
+										</div><!--col-lg-3-->
+										<div class="col-lg-3 col-md-4 col-sm-5">
 											<div class="post-type-box">
                                                 <div class="radio">
                                                     <input id="used_gc" type="radio" name="item-condition" value="used_gc" name="item-condition">
                                                     <label for="used_gc"><?php esc_html_e('Used : Good Condition', 'classiera') ?></label>
                                                 </div>
                                             </div>
-										</div><!--col-lg-3-->										<div class="col-lg-3 col-md-4 col-sm-5">
+										</div><!--col-lg-3-->
+										<div class="col-lg-3 col-md-4 col-sm-5">
 											<div class="post-type-box">
                                                 <div class="radio">
                                                     <input id="used_fc" type="radio" name="item-condition" value="used_fc" name="item-condition">
@@ -1054,7 +1059,10 @@ get_header(); ?>
 									</div><!--form-inline-->
                                 </div><!--col-sm-9-->
                             </div><!--Item condition-->
-								<?php } ?>							<?php if($adpost_defect == true){ ?>							<!--AD Defect -->							<div class="form-group">
+								<?php } ?>
+							<?php if($adpost_defect == true){ ?>
+							<!--AD Defect -->
+							<div class="form-group">
                                 <label class="col-sm-3 control-label"><?php esc_html_e('Defected ?', 'classiera') ?> : <span>*</span></label>
                                 <div class="col-sm-9">
 									<div class="form-inline row">
@@ -1084,7 +1092,9 @@ get_header(); ?>
 										</div><!--col-lg-3-->
 									</div><!--form-inline-->
                                 </div><!--col-sm-9-->
-                            </div><!--Item condition-->							<!--AD Defect -->							<?php } ?>
+                            </div><!--Item condition-->
+							<!--AD Defect -->
+							<?php } ?>
 						</div><!---form-main-section post-detail-->
 						<!-- extra fields -->
 						<div class="classieraExtraFields" style="display:none;"></div>

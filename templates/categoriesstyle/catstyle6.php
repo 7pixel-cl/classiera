@@ -51,7 +51,7 @@
 				//print_r($classieraCatFields);
 				if (isset($classieraCatFields[$tag])){
 					$classieraCatIconCode = $classieraCatFields[$tag]['category_icon_code'];
-					$classieraCatIcoIMG = $classieraCatFields[$tag]['your_image_url'];
+					$classieraCatIcoIMG = $classieraCatFields[$tag]['category_image'];
 					$classieraCatIconClr = $classieraCatFields[$tag]['category_icon_color'];
 					$categoryIMG = $classieraCatFields[$tag]['category_image'];
 				}

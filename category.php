@@ -182,8 +182,8 @@ if (isset($tag_extra_fields[$cat_id])) {
 										if(isset($tag_extra_fields[$tag]['category_icon_color'])){
 											$category_icon_color = $tag_extra_fields[$tag]['category_icon_color'];
 										}
-										if(isset($tag_extra_fields[$tag]['your_image_url'])){
-											$classieraCatIcoIMG = $tag_extra_fields[$tag]['your_image_url'];
+										if(isset($tag_extra_fields[$tag]['category_image'])){
+											$classieraCatIcoIMG = $tag_extra_fields[$tag]['category_image'];
 										}
 										
 									}
@@ -197,8 +197,8 @@ if (isset($tag_extra_fields[$cat_id])) {
 										if(isset($tag_extra_fields[$tag]['category_icon_color'])){
 											$category_icon_color = $tag_extra_fields[$tag]['category_icon_color'];
 										}
-										if(isset($tag_extra_fields[$tag]['your_image_url'])){
-											$classieraCatIcoIMG = $tag_extra_fields[$tag]['your_image_url'];
+										if(isset($tag_extra_fields[$tag]['category_image'])){
+											$classieraCatIcoIMG = $tag_extra_fields[$tag]['category_image'];
 										}
 									}
 								}else{
@@ -211,8 +211,8 @@ if (isset($tag_extra_fields[$cat_id])) {
 										if(isset($tag_extra_fields[$tag]['category_icon_color'])){
 											$category_icon_color = $tag_extra_fields[$tag]['category_icon_color'];
 										}
-										if(isset($tag_extra_fields[$tag]['your_image_url'])){
-											$classieraCatIcoIMG = $tag_extra_fields[$tag]['your_image_url'];
+										if(isset($tag_extra_fields[$tag]['category_image'])){
+											$classieraCatIcoIMG = $tag_extra_fields[$tag]['category_image'];
 										}
 									}
 								}
@@ -227,8 +227,8 @@ if (isset($tag_extra_fields[$cat_id])) {
 											if(isset($tag_extra_fields[$tag]['category_icon_color'])){
 												$category_icon_color = $tag_extra_fields[$tag]['category_icon_color'];
 											}
-											if(isset($tag_extra_fields[$tag]['your_image_url'])){
-												$classieraCatIcoIMG = $tag_extra_fields[$tag]['your_image_url'];
+											if(isset($tag_extra_fields[$tag]['category_image'])){
+												$classieraCatIcoIMG = $tag_extra_fields[$tag]['category_image'];
 											}
 										}
 									}

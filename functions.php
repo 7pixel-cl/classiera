@@ -227,7 +227,7 @@ if (!function_exists('classiera_my_category_fields')) {
 			$category_icon_code = isset( $tag_extra_fields[$tag->term_id]['category_icon_code'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['category_icon_code'] ) : '';
 			$category_image = isset( $tag_extra_fields[$tag->term_id]['category_image'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['category_image'] ) : '';
 			$category_icon_color = isset( $tag_extra_fields[$tag->term_id]['category_icon_color'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['category_icon_color'] ) : '';
-			$your_image_url = isset( $tag_extra_fields[$tag->term_id]['your_image_url'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['your_image_url'] ) : '';
+			$your_image_url = isset( $tag_extra_fields[$tag->term_id]['category_image'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['category_image'] ) : '';
 			$cat_pay_per_post = isset( $tag_extra_fields[$tag->term_id]['cat_pay_per_post'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['cat_pay_per_post'] ) : '';
 			$days_to_expire = isset( $tag_extra_fields[$tag->term_id]['days_to_expire'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['days_to_expire'] ) : '';
 			$cat_top_adv = isset( $tag_extra_fields[$tag->term_id]['cat_top_adv'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['cat_top_adv'] ) : '';
@@ -404,7 +404,7 @@ if (!function_exists('classiera_update_my_category_fields')) {
 		if(isset($_POST['taxonomy'])){	
 		  if($_POST['taxonomy'] == 'category'):
 			$tag_extra_fields = get_option(MY_CATEGORY_FIELDS);
-			$tag_extra_fields[$term_id]['your_image_url'] = strip_tags($_POST['your_image_url']);
+			$tag_extra_fields[$term_id]['category_image'] = strip_tags($_POST['category_image']);
 			$tag_extra_fields[$term_id]['category_image'] = $_POST['category_image'];
 			$tag_extra_fields[$term_id]['category_icon_code'] = $_POST['category_icon_code'];
 			$tag_extra_fields[$term_id]['category_icon_color'] = $_POST['category_icon_color'];
@@ -1942,8 +1942,10 @@ if (!function_exists('classiera_ad_condition')) {
 		if($string == 'used'){
 			$returnVal = esc_html__( 'Used : Like New', 'classiera' );
 		}elseif($string == 'new'){
-			$returnVal = esc_html__( 'Brand New', 'classiera' );		}elseif($string == 'used_gc'){
-			$returnVal = esc_html__( 'Used : Good condition', 'classiera' );		}elseif($string == 'used_fc'){
+			$returnVal = esc_html__( 'Brand New', 'classiera' );
+		}elseif($string == 'used_gc'){
+			$returnVal = esc_html__( 'Used : Good condition', 'classiera' );
+		}elseif($string == 'used_fc'){
 			$returnVal = esc_html__( 'Used : Fair condition', 'classiera' );
 		}else{
 			$returnVal = '';
@@ -2022,7 +2024,8 @@ if (!function_exists('classiera_TCF')){
 			return $number;
 		}
 	}
-}/*==========================
+}
+/*==========================
  Classiera : Classiera Defect Function
  @since classiera 4.0.22
 ===========================*/

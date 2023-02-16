@@ -59,8 +59,8 @@
 					if(isset($classieraCatFields[$tag]['category_icon_color'])){
 						$classieraCatIconClr = $classieraCatFields[$tag]['category_icon_color'];
 					}
-					if(isset($classieraCatFields[$tag]['your_image_url'])){
-						$classieraCatIcoIMG = $classieraCatFields[$tag]['your_image_url'];
+					if(isset($classieraCatFields[$tag]['category_image'])){
+						$classieraCatIcoIMG = $classieraCatFields[$tag]['category_image'];
 					}
 				}
 				$catCount = $category->count;

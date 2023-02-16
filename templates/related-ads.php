@@ -92,7 +92,7 @@ if($classiera_ads_typeOn == 1){
 				$my_query = new wp_query( $args );
 				$category_icon_code ="";
 				$category_icon_color ="";
-				$your_image_url ="";
+				$category_image ="";
 				$tag ="";
 				while( $my_query->have_posts() ) {
 					$my_query->the_post();

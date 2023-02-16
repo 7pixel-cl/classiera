@@ -216,7 +216,7 @@ if (!function_exists('classiera_my_category_fields')) {
 		$category_icon_code = '';
 		$category_image = '';
 		$category_icon_color = '';
-		$your_image_url = '';
+		$category_image = '';
 		$cat_pay_per_post = '';
 		$days_to_expire = '';
 		$cat_top_adv = '';
@@ -227,7 +227,7 @@ if (!function_exists('classiera_my_category_fields')) {
 			$category_icon_code = isset( $tag_extra_fields[$tag->term_id]['category_icon_code'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['category_icon_code'] ) : '';
 			$category_image = isset( $tag_extra_fields[$tag->term_id]['category_image'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['category_image'] ) : '';
 			$category_icon_color = isset( $tag_extra_fields[$tag->term_id]['category_icon_color'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['category_icon_color'] ) : '';
-			$your_image_url = isset( $tag_extra_fields[$tag->term_id]['your_image_url'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['your_image_url'] ) : '';
+			$category_image = isset( $tag_extra_fields[$tag->term_id]['category_image'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['category_image'] ) : '';
 			$cat_pay_per_post = isset( $tag_extra_fields[$tag->term_id]['cat_pay_per_post'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['cat_pay_per_post'] ) : '';
 			$days_to_expire = isset( $tag_extra_fields[$tag->term_id]['days_to_expire'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['days_to_expire'] ) : '';
 			$cat_top_adv = isset( $tag_extra_fields[$tag->term_id]['cat_top_adv'] ) ? esc_attr( $tag_extra_fields[$tag->term_id]['cat_top_adv'] ) : '';
@@ -324,19 +324,19 @@ if (!function_exists('classiera_my_category_fields')) {
 				<td>
 				<?php 
 
-				if(!empty($your_image_url)) {
+				if(!empty($category_image)) {
 
-					echo '<div style="width: 100%; float: left;"><img id="your_image_url_img" src="'. $your_image_url .'" style="float: left; margin-bottom: 20px;" /> </div>';
-					echo '<input id="your_image_url" type="text" size="36" name="your_image_url" style="max-width: 200px; float: left; margin-top: 10px; display: none;" value="'.$your_image_url.'" />';
-					echo '<input id="your_image_url_button_remove" class="button" type="button" style="max-width: 140px; float: left; margin-top: 10px;" value="Remove" /> </br>';
-					echo '<input id="your_image_url_button" class="button" type="button" style="max-width: 140px; float: left; margin-top: 10px; display: none;" value="Upload Image" /> </br>'; 
+					echo '<div style="width: 100%; float: left;"><img id="category_image_img" src="'. $category_image .'" style="float: left; margin-bottom: 20px;" /> </div>';
+					echo '<input id="category_image" type="text" size="36" name="category_image" style="max-width: 200px; float: left; margin-top: 10px; display: none;" value="'.$category_image.'" />';
+					echo '<input id="category_image_button_remove" class="button" type="button" style="max-width: 140px; float: left; margin-top: 10px;" value="Remove" /> </br>';
+					echo '<input id="category_image_button" class="button" type="button" style="max-width: 140px; float: left; margin-top: 10px; display: none;" value="Upload Image" /> </br>'; 
 
 				} else {
 
-					echo '<div style="width: 100%; float: left;"><img id="your_image_url_img" src="'. $your_image_url .'" style="float: left; margin-bottom: 20px;" /> </div>';
-					echo '<input id="your_image_url" type="text" size="36" name="your_image_url" style="max-width: 200px; float: left; margin-top: 10px; display: none;" value="'.$your_image_url.'" />';
-					echo '<input id="your_image_url_button_remove" class="button" type="button" style="max-width: 140px; float: left; margin-top: 10px; display: none;" value="Remove" /> </br>';
-					echo '<input id="your_image_url_button" class="button" type="button" style="max-width: 140px; float: left; margin-top: 10px;" value="Upload Image" /> </br>';
+					echo '<div style="width: 100%; float: left;"><img id="category_image_img" src="'. $category_image .'" style="float: left; margin-bottom: 20px;" /> </div>';
+					echo '<input id="category_image" type="text" size="36" name="category_image" style="max-width: 200px; float: left; margin-top: 10px; display: none;" value="'.$category_image.'" />';
+					echo '<input id="category_image_button_remove" class="button" type="button" style="max-width: 140px; float: left; margin-top: 10px; display: none;" value="Remove" /> </br>';
+					echo '<input id="category_image_button" class="button" type="button" style="max-width: 140px; float: left; margin-top: 10px;" value="Upload Image" /> </br>';
 
 				}
 
@@ -404,7 +404,7 @@ if (!function_exists('classiera_update_my_category_fields')) {
 		if(isset($_POST['taxonomy'])){	
 		  if($_POST['taxonomy'] == 'category'):
 			$tag_extra_fields = get_option(MY_CATEGORY_FIELDS);
-			$tag_extra_fields[$term_id]['your_image_url'] = strip_tags($_POST['your_image_url']);
+			$tag_extra_fields[$term_id]['category_image'] = strip_tags($_POST['category_image']);
 			$tag_extra_fields[$term_id]['category_image'] = $_POST['category_image'];
 			$tag_extra_fields[$term_id]['category_icon_code'] = $_POST['category_icon_code'];
 			$tag_extra_fields[$term_id]['category_icon_color'] = $_POST['category_icon_color'];
@@ -1942,8 +1942,10 @@ if (!function_exists('classiera_ad_condition')) {
 		if($string == 'used'){
 			$returnVal = esc_html__( 'Used : Like New', 'classiera' );
 		}elseif($string == 'new'){
-			$returnVal = esc_html__( 'Brand New', 'classiera' );		}elseif($string == 'used_gc'){
-			$returnVal = esc_html__( 'Used : Good condition', 'classiera' );		}elseif($string == 'used_fc'){
+			$returnVal = esc_html__( 'Brand New', 'classiera' );
+		}elseif($string == 'used_gc'){
+			$returnVal = esc_html__( 'Used : Good condition', 'classiera' );
+		}elseif($string == 'used_fc'){
 			$returnVal = esc_html__( 'Used : Fair condition', 'classiera' );
 		}else{
 			$returnVal = '';
@@ -2022,7 +2024,8 @@ if (!function_exists('classiera_TCF')){
 			return $number;
 		}
 	}
-}/*==========================
+}
+/*==========================
  Classiera : Classiera Defect Function
  @since classiera 4.0.22
 ===========================*/

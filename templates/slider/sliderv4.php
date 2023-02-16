@@ -11,7 +11,8 @@
 	$classieraLocationSearch = true;
 	$classieraLocationType = 'dropdown';
 	$locShownBy = 'post_location';
-	$classiera_cats_slider = true;	$classiera_remove_ajax = false;
+	$classiera_cats_slider = true;
+	$classiera_remove_ajax = false;
 	if(isset($redux_demo)){
 		$classieraCatSECTitle = $redux_demo['cat-sec-title'];
 		$classieraCatSECDESC = $redux_demo['cat-sec-desc'];
@@ -23,7 +24,8 @@
 		$classieraIMGheaderDesc = $redux_demo['homepage-v2-desc'];		
 		$classieraLocationSearch = $redux_demo['classiera_search_location_on_off'];
 		$classieraLocationType = $redux_demo['classiera_search_location_type'];
-		$locShownBy = $redux_demo['location-shown-by'];		$classiera_remove_ajax = $redux_demo['classiera_remove_ajax'];
+		$locShownBy = $redux_demo['location-shown-by'];
+		$classiera_remove_ajax = $redux_demo['classiera_remove_ajax'];
 		$classiera_cats_slider = $redux_demo['classiera_cats_slider'];
 	}
 	$page = get_page($post->ID);

@@ -25,7 +25,7 @@ get_header(); ?>
 	$page_custom_title = get_post_meta($current_page_id, 'page_custom_title', true);
 	$category_icon_code = "";
 	$category_icon_color = "";
-	$your_image_url = "";
+	$category_image = "";
 	$caticoncolor = "";
 	$category_icon = "";
 	$home_cat_desc = '';

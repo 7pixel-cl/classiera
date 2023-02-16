@@ -220,7 +220,9 @@ if($classiera_ads_typeOn == 1){
 									<a href="<?php echo esc_url($categoryLink); ?>"><?php echo esc_html($postCatgory[0]->name); ?></a>
 								</p>
 								<?php if(!empty($category_icon_code) || !empty($classieraCatIcoIMG)){ ?>
-									<?php echo $classieraCatIcoIMG?>
+									<?php error_log("I'm on line 38"); ?>
+									<?php error_log($classieraCatIcoIMG); ?>
+									<?php var_dump($classieraCatIcoIMG)?>
                                 <span class="category-icon-box" style=" background:<?php echo esc_html($category_icon_color); ?>; color:<?php echo esc_html($category_icon_color); ?>; ">
 									<?php 
 									if($classieraIconsStyle == 'icon'){

@@ -52,7 +52,7 @@
 				$classieraCatFields = get_option(MY_CATEGORY_FIELDS);
 				if(isset($classieraCatFields[$tag])){
 					$classieraCatIconCode = $classieraCatFields[$tag]['category_icon_code'];
-					$classieraCatIcoIMG = $classieraCatFields[$tag]['category_image'];
+					$classieraCatIcoIMG = $classieraCatFields[$tag]['your_image_url'];
 					$classieraCatIconClr = $classieraCatFields[$tag]['category_icon_color'];						
 				}
 				$cat = $category->count;

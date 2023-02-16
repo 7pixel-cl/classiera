@@ -35,10 +35,14 @@ if($classiera_ads_typeOn == 1){
                 <h4 class="text-uppercase"><?php esc_html_e( 'Related ads', 'classiera' ); ?></h4>
             </div><!--col-sm-6-->
             <div class="col-sm-6">
-                <div class="navText text-right flip hidden-xs">					<?php if(is_rtl()){?>					<a class="prev btn btn-primary sharp btn-style-one btn-sm"><i class="fas fa-chevron-right"></i></a>
-                    <a class="next btn btn-primary sharp btn-style-one btn-sm"><i class="fas fa-chevron-left"></i></a>					<?php }else{ ?>
+                <div class="navText text-right flip hidden-xs">
+					<?php if(is_rtl()){?>
+					<a class="prev btn btn-primary sharp btn-style-one btn-sm"><i class="fas fa-chevron-right"></i></a>
+                    <a class="next btn btn-primary sharp btn-style-one btn-sm"><i class="fas fa-chevron-left"></i></a>
+					<?php }else{ ?>
                     <a class="prev btn btn-primary sharp btn-style-one btn-sm"><i class="fas fa-chevron-left"></i></a>
-                    <a class="next btn btn-primary sharp btn-style-one btn-sm"><i class="fas fa-chevron-right"></i></a>					<?php } ?>
+                    <a class="next btn btn-primary sharp btn-style-one btn-sm"><i class="fas fa-chevron-right"></i></a>
+					<?php } ?>
                 </div>
             </div><!--col-sm-6-->
         </div><!--row-->
@@ -216,6 +220,7 @@ if($classiera_ads_typeOn == 1){
 									<a href="<?php echo esc_url($categoryLink); ?>"><?php echo esc_html($postCatgory[0]->name); ?></a>
 								</p>
 								<?php if(!empty($category_icon_code) || !empty($classieraCatIcoIMG)){ ?>
+									<?php echo $classieraCatIcoIMG?>
                                 <span class="category-icon-box" style=" background:<?php echo esc_html($category_icon_color); ?>; color:<?php echo esc_html($category_icon_color); ?>; ">
 									<?php 
 									if($classieraIconsStyle == 'icon'){

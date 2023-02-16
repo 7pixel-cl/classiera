@@ -309,7 +309,7 @@ get_header(); ?>
 								<!--NextendSocialLogin-->
 								<?php
 								if(class_exists('NextendSocialLogin', false)){
-									echo NextendSocialLogin::renderButtonsWithContainer();
+									echo do_shortcode('[nextend_social_login provider="google" style="icon"]');
 								}
 								?>
 								<!--AccessPress Socil Login-->

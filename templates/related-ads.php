@@ -102,9 +102,6 @@ if($classiera_ads_typeOn == 1){
 					if(isset($category[0]->category_parent) && $category[0]->category_parent == 0){
 						$tag = $category[0]->cat_ID;
 						$tag_extra_fields = get_option(MY_CATEGORY_FIELDS);
-						error_log('tag_extra_fields'); 
-						error_log($tag_extra_fields); 
-						var_dump($tag_extra_fields);
 						if (isset($tag_extra_fields[$tag])) {
 							if(isset($tag_extra_fields[$tag]['category_icon_code'])){
 								$category_icon_code = $tag_extra_fields[$tag]['category_icon_code'];
@@ -112,8 +109,8 @@ if($classiera_ads_typeOn == 1){
 							if(isset($tag_extra_fields[$tag]['category_icon_color'])){
 								$category_icon_color = $tag_extra_fields[$tag]['category_icon_color'];
 							}
-							if(isset($tag_extra_fields[$tag]['your_image_url'])){
-								$classieraCatIcoIMG = $tag_extra_fields[$tag]['your_image_url'];
+							if(isset($tag_extra_fields[$tag]['category_image'])){
+								$classieraCatIcoIMG = $tag_extra_fields[$tag]['category_image'];
 							}							
 						}
 					}elseif(isset($category[1]->category_parent) && $category[1]->category_parent == 0){
@@ -126,8 +123,8 @@ if($classiera_ads_typeOn == 1){
 							if(isset($tag_extra_fields[$tag]['category_icon_color'])){
 								$category_icon_color = $tag_extra_fields[$tag]['category_icon_color'];
 							}
-							if(isset($tag_extra_fields[$tag]['your_image_url'])){
-								$classieraCatIcoIMG = $tag_extra_fields[$tag]['your_image_url'];
+							if(isset($tag_extra_fields[$tag]['category_image'])){
+								$classieraCatIcoIMG = $tag_extra_fields[$tag]['category_image'];
 							}	
 						}
 					}else{
@@ -140,8 +137,8 @@ if($classiera_ads_typeOn == 1){
 							if(isset($tag_extra_fields[$tag]['category_icon_color'])){
 								$category_icon_color = $tag_extra_fields[$tag]['category_icon_color'];
 							}
-							if(isset($tag_extra_fields[$tag]['your_image_url'])){
-								$classieraCatIcoIMG = $tag_extra_fields[$tag]['your_image_url'];
+							if(isset($tag_extra_fields[$tag]['category_image'])){
+								$classieraCatIcoIMG = $tag_extra_fields[$tag]['category_image'];
 							}
 						}
 					}										
@@ -156,8 +153,8 @@ if($classiera_ads_typeOn == 1){
 								if(isset($tag_extra_fields[$tag]['category_icon_color'])){
 									$category_icon_color = $tag_extra_fields[$tag]['category_icon_color'];
 								}
-								if(isset($tag_extra_fields[$tag]['your_image_url'])){
-									$classieraCatIcoIMG = $tag_extra_fields[$tag]['your_image_url'];
+								if(isset($tag_extra_fields[$tag]['category_image'])){
+									$classieraCatIcoIMG = $tag_extra_fields[$tag]['category_image'];
 								}
 							}
 						}

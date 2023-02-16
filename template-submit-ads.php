@@ -73,8 +73,7 @@ if(isset($redux_demo)){
 	$paidIMG = $redux_demo['premium-ads-limit'];
 	$regularIMG = $redux_demo['regular-ads-limit'];
 	$classiera_image_size = $redux_demo['classiera_image_size'];
-	$classieraRegularAdsOn = $redux_demo['regular-ads'];
-	$adpost_defect = $redux_demo['adpost_defect'];
+	$classieraRegularAdsOn = $redux_demo['regular-ads'];	$adpost_defect = $redux_demo['adpost_defect'];
 }
 if(isset($redux_demo['classiera_exclude_categories'])){
 	$excludeCats = $redux_demo['classiera_exclude_categories'];
@@ -197,12 +196,7 @@ if(isset($_POST['postTitle'])){
 				}else{
 					$longitude = $googleLong;
 				}			
-				$catID = $classieraCategory.'custom_field';	
-				if(isset($_POST[$catID])){
-					$custom_fields = $_POST[$catID];
-				}else{
-					$custom_fields = array();
-				}
+				$catID = $classieraCategory.'custom_field';					if(isset($_POST[$catID])){					$custom_fields = $_POST[$catID];				}else{					$custom_fields = array();				}
 				/*== Get Country Name ==*/
 				if(isset($_POST['post_location'])){
 					$postLo = $_POST['post_location'];
@@ -275,8 +269,7 @@ if(isset($_POST['postTitle'])){
 				}
 				if(isset($_POST['item-condition'])){
 					update_post_meta($post_id, 'item-condition', $_POST['item-condition'], $allowed);
-				}				
-				if(isset($_POST['post_defect'])){
+				}								if(isset($_POST['post_defect'])){
 					update_post_meta($post_id, 'post_defect', $_POST['post_defect'], $allowed);
 				}
 				if(isset($_POST['pay_per_post_product_id'])){
@@ -571,8 +564,8 @@ get_header(); ?>
 										);
 									}									
 									$categories = get_terms('category', $argscat);
-									foreach ($categories as $category){category_image
-										$tag = $category->term_id;category_image
+									foreach ($categories as $category){
+										$tag = $category->term_id;
 										$classieraCatFields = get_option(MY_CATEGORY_FIELDS);
 										if (isset($classieraCatFields[$tag])){
 											if(isset($classieraCatFields[$tag]['category_icon_code'])){
@@ -940,38 +933,26 @@ get_header(); ?>
                                         <input id="new" type="radio" name="item-condition" value="new" checked>
                                         <label for="new"><?php esc_html_e('Brand New', 'classiera') ?></label>
                                         <input id="used" type="radio" name="item-condition" value="used">
-                                        <label for="used"><?php esc_html_e('Used : Like New', 'classiera') ?></label>
-										<input id="used_gc" type="radio" name="item-condition" value="used_gc">
-                                        <label for="used_gc"><?php esc_html_e('Used : Good Condition', 'classiera') ?></label>
-										<input id="used_fc" type="radio" name="item-condition" value="used_fc">
+                                        <label for="used"><?php esc_html_e('Used : Like New', 'classiera') ?></label>										<input id="used_gc" type="radio" name="item-condition" value="used_gc">
+                                        <label for="used_gc"><?php esc_html_e('Used : Good Condition', 'classiera') ?></label>										<input id="used_fc" type="radio" name="item-condition" value="used_fc">
                                         <label for="used_fc"><?php esc_html_e('Used : Fair Condition', 'classiera') ?></label>
                                     </div>
                                 </div>
                             </div><!--Item condition-->
-								<?php } ?>
-							<?php if($adpost_defect == true){ ?>
-							<!--AD Defect -->
-							<div class="form-group">
+								<?php } ?>							<?php if($adpost_defect == true){ ?>							<!--AD Defect -->							<div class="form-group">
                                 <label class="col-sm-3 text-left flip"><?php esc_html_e('Defected ?', 'classiera') ?> : <span>*</span></label>
                                 <div class="col-sm-9">
                                     <div class="radio">
                                         <input id="no_defect" type="radio" name="post_defect" value="no_defect" checked>
-                                        <label for="no_defect">
-											<?php esc_html_e('No defect', 'classiera') ?>
-										</label>
+                                        <label for="no_defect">											<?php esc_html_e('No defect', 'classiera') ?>										</label>
                                         <input id="minor_defect" type="radio" name="post_defect" value="minor_defect">
-                                        <label for="minor_defect">
-											<?php esc_html_e('Minor defect', 'classiera') ?>
-										</label>
+                                        <label for="minor_defect">											<?php esc_html_e('Minor defect', 'classiera') ?>										</label>
 										<input id="major_defect" type="radio" name="post_defect" value="major_defect">
-                                        <label for="major_defect">
-											<?php esc_html_e('Major defect', 'classiera') ?>
-										</label>
+                                        <label for="major_defect">											<?php esc_html_e('Major defect', 'classiera') ?>										</label>
                                     </div>
                                 </div>
                             </div>
-							<!--AD Defect -->
-							<?php } ?>							
+							<!--AD Defect -->							<?php } ?>							
 						</div><!---form-main-section post-detail-->
 						<!-- extra fields -->
 						<div class="classieraExtraFields" style="display:none;"></div>

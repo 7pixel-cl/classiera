@@ -104,7 +104,7 @@ jQuery(document).ready(function(jQuery){
 	Categories upload icon images function
 	======================================*/
 	var classiera_iconIMG_uploader;
-	jQuery('#category_image_button').click(function(e) {
+	jQuery('#your_image_url_button').click(function(e) {
 		e.preventDefault();
 		//If the uploader object has already been created, reopen the dialog
 		if (classiera_iconIMG_uploader) {
@@ -124,23 +124,23 @@ jQuery(document).ready(function(jQuery){
 			var attachment = classiera_iconIMG_uploader.state().get('selection').first().toJSON();
 			var url = '';
 			url = attachment['url'];
-			jQuery('#category_image').val(url);
-			jQuery( "img#category_image_img" ).attr({
+			jQuery('#your_image_url').val(url);
+			jQuery( "img#your_image_url_img" ).attr({
 				src: url
 			});
-			jQuery("#category_image_button").css("display", "none");
-			jQuery("#category_image_button_remove").css("display", "block");
+			jQuery("#your_image_url_button").css("display", "none");
+			jQuery("#your_image_url_button_remove").css("display", "block");
 		});
 		//Open the uploader dialog
 		classiera_iconIMG_uploader.open();
 	});
-	jQuery('#category_image_button_remove').click(function(e) {
-		jQuery('#category_image').val('');
-		jQuery( "img#category_image_img" ).attr({
+	jQuery('#your_image_url_button_remove').click(function(e) {
+		jQuery('#your_image_url').val('');
+		jQuery( "img#your_image_url_img" ).attr({
 			src: ''
 		});
-		jQuery("#category_image_button").css("display", "block");
-		jQuery("#category_image_button_remove").css("display", "none");
+		jQuery("#your_image_url_button").css("display", "block");
+		jQuery("#your_image_url_button_remove").css("display", "none");
 	});
 	
 });

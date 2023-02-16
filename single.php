@@ -43,7 +43,7 @@ $termsandcondition = '';
 $classiera_gdpr_url = '';
 $category_icon_code = "";
 $category_icon_color = "";
-$category_image = "";
+$your_image_url = "";
 if(isset($redux_demo)){
 	$classieraContactEmailError = $redux_demo['contact-email-error'];
 	$classieraContactEmail = $redux_demo['contact-email'];
@@ -409,8 +409,7 @@ if(isset($_POST['unfollow'])){
 									<span class="pull-right flip"><?php echo classiera_ad_condition($itemCondition); ?></span>
 									</p>
                                 </li><!--Condition-->
-								<?php } ?>
-								<?php if(!empty($post_defect)){?>
+								<?php } ?>								<?php if(!empty($post_defect)){?>
 								<li>
                                     <p class="clearfix"><?php esc_html_e( 'Defected Condition', 'classiera' ); ?>: 
 									<span class="pull-right flip"><?php echo classiera_ad_defect($post_defect); ?></span>

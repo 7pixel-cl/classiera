@@ -68,7 +68,7 @@ if ($user_ID){
 		$password = $_POST['pwd'];
 		$confirm_password = $_POST['confirm'];
 		
-		$category_image = esc_sql($_POST['your_author_image_url']);
+		$your_image_url = esc_sql($_POST['your_author_image_url']);
 
 		update_user_meta( $user_ID, 'first_name', $first );
 
@@ -213,7 +213,7 @@ $current_page_id = $page->ID;
 									}else{ ?>
 									<img class="media-object img-circle author-avatar" src="<?php echo esc_url( $profileIMG ); ?>" alt="<?php echo esc_attr( $authorName ); ?>">	
 									<?php } ?>
-									<input class="criteria-image-url" id="category_image" type="text" size="36" name="your_author_image_url" style="display: none;" value="" />
+									<input class="criteria-image-url" id="your_image_url" type="text" size="36" name="your_author_image_url" style="display: none;" value="" />
                                 </div>
                                 <div class="media-body">
                                     <h5 class="media-heading text-uppercase">

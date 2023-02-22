@@ -43,7 +43,8 @@ $googleMapadPost = true;
 $regular_ads = true;
 $classieraRegularAdsDays = 'lifetime';
 $classiera_ad_location_remove = true;
-$classiera_post_web_url = true;$adpost_defect = true;
+$classiera_post_web_url = true;
+$adpost_defect = true;
 $excludeCats = '';
 $excludeCatsUsers = '';
 $classiera_google_api = '';
@@ -96,7 +97,8 @@ if(isset($redux_demo)){
 	$excludeCats = $redux_demo['classiera_exclude_categories'];
 	$excludeCatsUsers = $redux_demo['classiera_exclude_user'];
 	$classiera_google_api = $redux_demo['classiera_google_api'];
-	$classiera_image_size = $redux_demo['classiera_image_size'];	$adpost_defect = $redux_demo['adpost_defect'];
+	$classiera_image_size = $redux_demo['classiera_image_size'];
+	$adpost_defect = $redux_demo['adpost_defect'];
 }
 $args = array(
 	'post_type' => 'post',
@@ -286,7 +288,8 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		Collect Post Custom Fields values
 		===========================*/
 		
-		$catID = $mCatID.'custom_field';		if(isset($_POST[$catID])){
+		$catID = $mCatID.'custom_field';
+		if(isset($_POST[$catID])){
 			$custom_fields = $_POST[$catID];
 		}else{
 			$custom_fields = array();
@@ -324,7 +327,7 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		if(isset($_POST['post_category_type'])){
 			update_post_meta($post_id, 'post_category_type', esc_attr( $_POST['post_category_type'] ) );
 		}
-		$postMultiTag = $_POST['post_currency_tag'];
+		//$postMultiTag = $_POST['post_currency_tag'];
 		/*==========================
 		Update Post meta
 		===========================*/
@@ -405,7 +408,8 @@ if(isset($_POST['submitted']) && isset($_POST['post_nonce_field']) && wp_verify_
 		if(isset($_POST['item-condition'])){
 			$itemCondition = $_POST['item-condition'];
 			update_post_meta($post_id, 'item-condition', $itemCondition, $allowed);
-		}		if(isset($_POST['post_defect'])){
+		}
+		if(isset($_POST['post_defect'])){
 			update_post_meta($post_id, 'post_defect', $_POST['post_defect'], $allowed);
 		}
 		if(isset($_POST['classiera_post_type'])){
@@ -939,7 +943,8 @@ if($result){
                                         <input id="new" type="radio" name="item-condition" value="new" <?php if($itemCondition == 'new'){echo "checked";}?>>
                                         <label for="new"><?php esc_html_e('Brand New', 'classiera') ?></label>
                                         <input id="used" type="radio" name="item-condition" value="used" <?php if($itemCondition == 'used'){echo "checked";}?>>
-                                        <label for="used"><?php esc_html_e('Used : Like New', 'classiera') ?></label>										<input id="used_gc" type="radio" name="item-condition" value="used_gc" <?php if($itemCondition == 'used_gc'){echo "checked";}?>>
+                                        <label for="used"><?php esc_html_e('Used : Like New', 'classiera') ?></label>
+										<input id="used_gc" type="radio" name="item-condition" value="used_gc" <?php if($itemCondition == 'used_gc'){echo "checked";}?>>
                                         <label for="used_gc"><?php esc_html_e('Used : Good Condition', 'classiera') ?></label>
 										<input id="used_fc" type="radio" name="item-condition" value="used_fc" <?php if($itemCondition == 'used_fc'){echo "checked";}?>>
                                         <label for="used_fc"><?php esc_html_e('Used : Fair Condition', 'classiera') ?></label>
@@ -947,8 +952,10 @@ if($result){
                                 </div>
                             </div><!--Item condition-->
 							<?php } ?>
-							<!--Item Condition-->							<?php if($adpost_defect == true){ ?>
-							<!--AD Defect -->							<div class="form-group">
+							<!--Item Condition-->
+							<?php if($adpost_defect == true){ ?>
+							<!--AD Defect -->
+							<div class="form-group">
                                 <label class="col-sm-3 text-left flip">
 									<?php esc_html_e('Defected ?', 'classiera') ?> : <span>*</span>
 								</label>

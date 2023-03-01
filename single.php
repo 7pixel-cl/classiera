@@ -538,7 +538,7 @@ if(isset($_POST['unfollow'])){
 											classiera_escape($singleHTMLAds);
 										}
 									}else{
-										echo '<a href="'.esc_url($singleAdImglink1).'" onclick="<script>console.log("Click en imagen") </script>" target="_blank"><img class="img-responsive" alt="image" src="'.esc_url($singleAdImg1).'" /></a>';
+										echo '<a href="'.esc_url($singleAdImglink1).'" onclick="<script>console.log(\"Click en imagen\") </script>" target="_blank"><img class="img-responsive" alt="image" src="'.esc_url($singleAdImg1).'" /></a>';
 									}
 									?>
 									<a class = 'banner-ad-label-top' href="https://api.whatsapp.com/send?phone=56953535153&text=Hola,+estoy+interesado+en+publicitar+en+Necesito+en+Villarrica" target="_blank">Anuncia con nosotros >

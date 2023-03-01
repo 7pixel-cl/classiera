@@ -93,7 +93,7 @@ get_header();
 									echo '<a href="'.esc_url($homeAdImglink1).'" target="_blank"><img class="img-responsive" alt="image" src="'.esc_url($homeAdImg1).'" /></a>';
 								}
 							?>
-									<a href="https://api.whatsapp.com/send?phone=56953535153&text=Hola,+estoy+interesado+en+publicitar+en+Necesito+en+Villarrica" target="_blank">Anuncia con nosotros >
+									<a  class = 'banner-ad-label-top' href="https://api.whatsapp.com/send?phone=56953535153&text=Hola,+estoy+interesado+en+publicitar+en+Necesito+en+Villarrica" target="_blank">Anuncia con nosotros >
 									<i class="fab fa-whatsapp"></i> 
 								</a>
 						</div>

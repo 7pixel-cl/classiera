@@ -23,7 +23,7 @@
 					}
 				}
 				?>
-						<a href="https://api.whatsapp.com/send?phone=56953535153&text=Hola,+estoy+interesado+en+publicitar+en+Necesito+en+Villarrica" target="_blank">Anuncia con nosotros >
+						<a class = 'banner-ad-label-top' href="https://api.whatsapp.com/send?phone=56953535153&text=Hola,+estoy+interesado+en+publicitar+en+Necesito+en+Villarrica" target="_blank">Anuncia con nosotros >
 									<i class="fab fa-whatsapp"></i> 
 								</a>
 			</div>

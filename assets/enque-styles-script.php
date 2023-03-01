@@ -19,7 +19,7 @@ function classiera_scripts_styles(){
 	wp_enqueue_script('select2.min', get_template_directory_uri() . '/js/select2.min.js', 'jquery', '', true);
 	wp_enqueue_script('classiera', get_template_directory_uri() . '/js/classiera.js', 'jquery', '', true);
 	wp_enqueue_script('jquery-ui', get_template_directory_uri() . '/js/jquery-ui.min.js', 'jquery', '', true);		
-	wp_enqueue_script('mixpanel', get_template_directory_uri() . '/js/mixpanel.js', 'jquery', '', 0.1);		
+	wp_enqueue_script('mixpanel', get_template_directory_uri() . '/js/mixpanel.js', 'jquery', '', null);		
 	
 	// Adds JavaScript to pages with the comment form to support sites with
 	// threaded comments (when in use).

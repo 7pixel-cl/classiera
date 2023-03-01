@@ -6896,7 +6896,7 @@ inner-page-content
 }
 .inner-page-content .login-register.login-register-v1 .single-label label {
   color: #232323;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 15px;
   line-height: 45px;
   font-weight: normal;

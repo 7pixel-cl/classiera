@@ -98,7 +98,7 @@
 					}
 					?>
 					<div class="form-group">
-                        <button class="radius" type="submit" name="search" value="Search"><?php esc_html_e( 'Search', 'classiera' ); ?><i class="fas fa-search icon-with-btn-right pull-right flip"></i></button>
+                        <button class="radius" onclick="mixpanel_search_event('Busqueda')" type="submit" name="search" value="Search"><?php esc_html_e( 'Search', 'classiera' ); ?><i class="fas fa-search icon-with-btn-right pull-right flip"></i></button>
                     </div>
 				</form>
 			</div><!--col-md-12-->

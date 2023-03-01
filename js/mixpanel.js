@@ -12,3 +12,23 @@ mixpanel.track('Page View', {
   'source': "Pat's affiliate site",
   'Opted out of email': true,
 });
+
+function mixpanel_search_event(query){
+    mixpanel.track("Search Event",
+        {
+            "query": query,
+        })
+}
+/*
+Events to implement
+TODO: Search event: Capture query of every search page
+TODO: Category event: Capture landing on a category page
+TODO: Ad Banner: Capture ad banner clicked
+TODO: City Landing: Capture city
+TODO: Single add View: Capture single ad viewed
+TODO: Related Add View: Capture related ad clicked
+TODO: Contact Page View
+TODO: 
+
+
+*/

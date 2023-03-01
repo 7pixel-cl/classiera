@@ -83,6 +83,7 @@ get_header();
 				<div class="container">
 					<div class="row">							
 						<div class="col-lg-12 col-md-12 col-sm-12 center-block text-center">
+							<label class='banner-ad-label-top'>Espacio Publiciario</label>
 							<?php 
 								if(!empty($homeHTMLAds)){
 									if(function_exists('classiera_escape')) {
@@ -92,6 +93,7 @@ get_header();
 									echo '<a href="'.esc_url($homeAdImglink1).'" target="_blank"><img class="img-responsive" alt="image" src="'.esc_url($homeAdImg1).'" /></a>';
 								}
 							?>
+							<label class='banner-ad-label-bottom'>Anuncia con nosotros</label>
 						</div>
 					</div>
 				</div>	

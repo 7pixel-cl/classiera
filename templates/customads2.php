@@ -14,6 +14,7 @@
 			}			
 			?>
 			<div class="col-lg-12 col-md-12 col-sm-12 center-block text-center">
+				<label class='banner-ad-label-top'>Espacio Publiciario</label>
 				<?php 
 				if(!empty($homeHTMLAds) || !empty($homeAdImg1)){
 					if(!empty($homeHTMLAds)){
@@ -23,6 +24,7 @@
 					}
 				}
 				?>
+				<label class='banner-ad-label-bottom'>Anuncia con nosotros</label>
 			</div>
 		</div>
 	</div>	

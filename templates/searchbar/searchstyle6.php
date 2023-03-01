@@ -98,7 +98,7 @@
 						?>
 						<input type="hidden" class="classiera_nonce" value="<?php echo wp_create_nonce( 'classiera_nonce' ); ?>">
 						<div class="form-group">
-							<button type="submit" name="search" value="<?php esc_attr_e( 'Search', 'classiera' ); ?>"><?php esc_html_e( 'Search', 'classiera' ); ?></button>
+							<button type="submit" onclick="mixpanel_search_event('Busqueda')" name="search" value="<?php esc_attr_e( 'Search', 'classiera' ); ?>"><?php esc_html_e( 'Search', 'classiera' ); ?></button>
 						</div><!--form-group-->
 					</div><!--form-v6-bg-->
 				</form>

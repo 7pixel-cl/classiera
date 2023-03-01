@@ -13,6 +13,7 @@
 			}			
 			?>
 			<div class="col-lg-12 col-md-12 col-sm-12 center-block text-center">
+				<p>Espacio Publiciario</p>
 				<?php
 				if(!empty($homeHTMLAds) || !empty($homeAdImg1)){
 					if(!empty($homeHTMLAds)){

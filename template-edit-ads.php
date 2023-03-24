@@ -1214,16 +1214,13 @@ if($result){
                                     <div class="inner-addon right-addon">
 										<i class="form-icon right-form-icon fas fa-angle-down"></i>
                                         <select name="post_location" id="post_location" class="form-control form-control-md select_country">
-                                            <option value="-1" selected disabled><?php esc_html_e('Select Country', 'classiera'); ?></option>
-                                            <?php 
-											foreach( $country_posts as $country_post ){
-												?>
-												<option value="<?php echo esc_attr( $country_post->ID ); ?>">
-													<?php echo esc_html( $country_post->post_title ); ?>
-												</option>
-												<?php
-											}
-											?>
+										<option value="-1" selected disabled><?php esc_html_e('Select Country', 'classiera'); ?></option>
+                            			<?php 
+                           				 foreach ($country_posts as $country_post) {
+										?>
+                                		<option value="<?php echo esc_attr($country_post->ID); ?>" <?php selected($selected_country, $country_post->post_title); ?>>
+                                    		<?php echo esc_html($country_post->post_title); ?>
+										</option>
                                         </select>
                                     </div>
                                 </div>

@@ -1221,6 +1221,9 @@ if($result){
                                 		<option value="<?php echo esc_attr($country_post->ID); ?>" <?php selected($selected_country, $country_post->post_title); ?>>
                                     		<?php echo esc_html($country_post->post_title); ?>
 										</option>
+										<?php
+											}
+											?>
                                         </select>
                                     </div>
                                 </div>

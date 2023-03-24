@@ -1212,16 +1212,19 @@ if($result){
                                 <label class="col-sm-3 text-left flip"><?php esc_html_e('Select Country', 'classiera') ?>: <span>*</span></label>
                                 <div class="col-sm-6">
                                     <div class="inner-addon right-addon">
-										<i class="form-icon right-form-icon fas fa-angle-down"></i>
-                                        <select name="post_location" id="post_location" class="form-control form-control-md select_country">
-										<option value="-1" selected disabled><?php esc_html_e('Select Country', 'classiera'); ?></option>
-                            			<?php 
-                           				 foreach ($country_posts as $country_post) {
-										?>
-                                		<option value="<?php echo esc_attr($country_post->ID); ?>" <?php selected($selected_country, $country_post->post_title); ?>>
-                                    		<?php echo esc_html($country_post->post_title); ?>
-										</option>
-										<?php
+                                        <i class="form-icon right-form-icon fas fa-angle-down"></i>
+                                        <select name="post_location" id="post_location" class="form-control form-control-md">
+                                            <option <?php if(empty($post_location)){ echo "selected"; }?> disabled value="">
+												<?php esc_html_e('Select Country', 'classiera'); ?>
+											</option>
+                                            <?php 
+											foreach( $country_posts as $country_post ){
+												if($post_location == $country_post->post_title){
+													$getStatesbyID = $country_post->ID;
+												}
+												?>
+												<option <?php if($post_location == $country_post->post_title){ echo "selected"; }?> value="<?php echo esc_attr($country_post->ID); ?>"><?php echo esc_html($country_post->post_title); ?></option>
+												<?php
 											}
 											?>
                                         </select>

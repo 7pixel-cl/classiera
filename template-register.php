@@ -344,7 +344,7 @@ get_header(); ?>
                                         <div class="col-lg-9 col-sm-9">
                                             <div class="inner-addon left-addon">
                                                 <i class="left-addon form-icon fas fa-lock"></i>
-                                                <input type="text" id="username" name="username" class="form-control form-control-md" placeholder="<?php esc_attr_e('Enter username', 'classiera') ?>" data-error="<?php esc_attr_e('Username required', 'classiera') ?>" pattern="[a-zA-Z0-9]+" required>
+                                                <input type="text" id="username" name="username" class="form-control form-control-md" placeholder="<?php esc_attr_e('Enter username', 'classiera') ?>" data-error="<?php esc_attr_e('Username required', 'classiera') ?>" pattern="[a-zA-Z0-9.-_]++" required>
 												<div class="help-block with-errors"></div>
                                             </div>
                                         </div>
